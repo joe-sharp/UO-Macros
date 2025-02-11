@@ -11,7 +11,7 @@ while Skill("Mager") < GOAL:
     if Mana("self") < 50:
         # Replace this with a Macro that eats and drinks whatever you want and ends with a `Pause(1000)`.
         # Or simply remove it if you don't need to eat/drink.
-        PlayMacro("telfer-eat")
+        PlayMacro("eat")
         while Mana() < MaxMana("self"):
             UseSkill("Meditatio")
             Pause(10000)
