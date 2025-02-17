@@ -1,7 +1,7 @@
 GOAL = 100
 
 while Skill("Tailorin") < GOAL:
-    # if Skill("Tailorin") < 35:
+    if Skill("Tailorin") < 35:
         UseType(0xf9f)
         WaitForTarget(5000)
         TargetType(0x152e)
@@ -11,7 +11,7 @@ while Skill("Tailorin") < GOAL:
         WaitForGump(0x38920abd, 5000)
         ReplyGump(0x38920abd, 2)
         WaitForGump(0x38920abd, 5000)
-    # if (Skill("Tailorin") >= 35 and Skill("Tailorin") < 42):
+    if (Skill("Tailorin") >= 35 and Skill("Tailorin") < 42):
         UseType(0xf9f)
         WaitForTarget(5000)
         TargetType(0x153d)
@@ -21,7 +21,7 @@ while Skill("Tailorin") < GOAL:
         WaitForGump(0x38920abd, 5000)
         ReplyGump(0x38920abd, 23)
         WaitForGump(0x38920abd, 5000)
-    # if (Skill("Tailorin") >= 42 and Skill("Tailorin") < 50):
+    if (Skill("Tailorin") >= 42 and Skill("Tailorin") < 50):
         UseType(0xf9f)
         WaitForTarget(5000)
         TargetType(0x1515)
