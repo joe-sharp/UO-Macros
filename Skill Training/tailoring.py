@@ -2,17 +2,45 @@ GOAL = 100
 
 while Skill("Tailorin") < GOAL:
     # if Skill("Tailorin") < 35:
-        # TBD - Short Pants
+        UseType(0xf9f)
+        WaitForTarget(5000)
+        TargetType(0x152e)
+        UseType(0x4c81)
+        WaitForGump(0x38920abd, 5000)
+        ReplyGump(0x38920abd, 22)
+        WaitForGump(0x38920abd, 5000)
+        ReplyGump(0x38920abd, 2)
+        WaitForGump(0x38920abd, 5000)
     # if (Skill("Tailorin") >= 35 and Skill("Tailorin") < 42):
-        # TBD - Full Apron
+        UseType(0xf9f)
+        WaitForTarget(5000)
+        TargetType(0x153d)
+        UseType(0x4c81)
+        WaitForGump(0x38920abd, 5000)
+        ReplyGump(0x38920abd, 29)
+        WaitForGump(0x38920abd, 5000)
+        ReplyGump(0x38920abd, 23)
+        WaitForGump(0x38920abd, 5000)
     # if (Skill("Tailorin") >= 42 and Skill("Tailorin") < 50):
-        # TBD - Cloaks
+        UseType(0xf9f)
+        WaitForTarget(5000)
+        TargetType(0x1515)
+        UseType(0x4c81)
+        WaitForGump(0x38920abd, 5000)
+        ReplyGump(0x38920abd, 15)
+        WaitForGump(0x38920abd, 5000)
+        ReplyGump(0x38920abd, 72)
+        WaitForGump(0x38920abd, 5000)
     if (Skill("Tailorin") >= 50 and Skill("Tailorin") < 54):
         UseType(0xf9f)
         WaitForTarget(5000)
         TargetType(0x2783)
         UseType(0x4c81)
-        # Fill in gump picks for Female Kimono
+        WaitForGump(0x38920abd, 5000)
+        ReplyGump(0x38920abd, 15)
+        WaitForGump(0x38920abd, 5000)
+        ReplyGump(0x38920abd, 380)
+        WaitForGump(0x38920abd, 5000)
     if (Skill("Tailorin") >= 54 and Skill("Tailorin") < 65):
         UseType(0xf9f)
         WaitForTarget(5000)
