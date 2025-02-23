@@ -1,26 +1,26 @@
-while not Dead("self"):
-	if not FindType(0xe21, -1, "Backpack"):
-		HeadMsg("Out of Bandages!", "self", 33)
+while not Dead('self'):
+	if not FindType(0xe21, -1, 'Backpack'):
+		HeadMsg('Out of Bandages!', 'self', 33)
 		Stop()
-	if Skill("Healin") == SkillCap("Healin"):
-		HeadMsg("Healing 100!", "self", 33)
+	if Skill('Healin') == SkillCap('Healin'):
+		HeadMsg('Healing 100!', 'self', 33)
 		Stop()
-	if Hits("self") < 120:
-		while Hits("self") < MaxHits("self"):
+	if Hits('self') < 120:
+		while Hits('self') < MaxHits('self'):
 			BandageSelf()
 			Pause(10000)
 	else:
-		PlayMacro("peace")
+		PlayMacro('peace')
 
 
 if not (Poisoned(0x151e) and Hits(0x151e) < 50):
 	Pause(3000)
-	Msg("[set Poison regular")
+	Msg('[set Poison regular')
 	WaitForTarget(5000)
 	Target(0x151e)
 	#Target(0x127cf)
 if Hits(0x151e) < 25:
-	Msg("[set Poison none")
+	Msg('[set Poison none')
 	WaitForTarget(5000)
 	Target(0x151e)
 Pause(3000)

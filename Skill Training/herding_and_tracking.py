@@ -7,12 +7,12 @@
 def herd():
     UseObject(0x40098035)
     WaitForTarget(5000)
-    Target("last")
+    Target('last')
     WaitForTarget(5000)
     TargetTileOffset(0, 0, 0)
 
 def track():
-    UseSkill("Trackin")
+    UseSkill('Trackin')
     WaitForGump(0xb16e7d71, 5000)
     ReplyGump(0xb16e7d71, 5)
 

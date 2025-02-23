@@ -17,28 +17,28 @@ def GetNearestTree():
             if statics == None:
                 continue
             for s in statics:
-                if s.Name.Contains("tree"):
+                if s.Name.Contains('tree'):
                     trees.append({'X': s.X, 'Y': s.Y})
     return trees
 
 def moveToPackAnimal():
-    Organizer("LogsToPackMule")
+    Organizer('LogsToPackMule')
 
 def moveToTree(tree):
     i = 0
-    while X("self") <> tree['X'] and Y("self") <> tree['Y']:
+    while X('self') <> tree['X'] and Y('self') <> tree['Y']:
         if i >= 3:
-            HeadMsg("Pathfinding failed. Skipping tree.", "self")
+            HeadMsg('Pathfinding failed. Skipping tree.', 'self')
             return False
-        HeadMsg("*Pathfinding*", "self")
+        HeadMsg('*Pathfinding*', 'self')
         Pathfind(tree['X'], tree['Y'], 0)
         Pause(2000)
         i += 1
     return True
 
 def lumberjack():
-    while not InJournal("not enough") and not InJournal("can't use an axe"):
-        UseLayer("TwoHanded")
+    while not InJournal('not enough') and not InJournal('can't use an axe'):
+        UseLayer('TwoHanded')
         WaitForTarget(1000)
         TargetTileOffsetResource(-1, 0, 0)
         Pause(1100)
@@ -46,13 +46,13 @@ def lumberjack():
 Trees = GetNearestTree()
 if len(Trees) > 0:
     TotalTrees = len(Trees)
-    SysMessage(str(TotalTrees) + " total trees in queue")
+    SysMessage(str(TotalTrees) + ' total trees in queue')
     for tree in Trees:
         tree['X'] += 1
         if moveToTree(tree):
             lumberjack()
             moveToPackAnimal()
-            PlayMacro("eat")
+            PlayMacro('eat')
             TotalTrees -= 1
-            SysMessage(str(TotalTrees) + " trees left in the queue!")
+            SysMessage(str(TotalTrees) + ' trees left in the queue!')
             ClearJournal()

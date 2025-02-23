@@ -306,7 +306,7 @@ def find_animal_to_tame():
 
     import clr
 
-    clr.AddReference("System.Core")
+    clr.AddReference('System.Core')
     clr.ImportExtensions(System.Linq)
 
     animal_ids = get_animal_ids_at_or_over_taming_difficulty(
@@ -386,7 +386,7 @@ def train_animal_taming():
     global need_to_recall
 
     if Skill('Animal Tamin') == taming_cap:
-        MessageBox("Done", 'You\'ve already maxed out Animal Taming!')
+        MessageBox('Done', "You've already maxed out Animal Taming!")
         return
 
     # Initialize variables
@@ -418,7 +418,7 @@ def train_animal_taming():
                 SetTimer('need_to_recall', 0)
                 # recall to rune logic
                 # Pause(100)
-                PlaySound("Bike Horn.wav")
+                PlaySound('Bike Horn.wav')
                 Stop()
 
         if animal_being_tamed > 0 and not tame_ongoing:
@@ -547,7 +547,7 @@ def follow_rename_and_kill(animal_being_tamed):
     while Hits(animal_being_tamed) > 0 and Cast('Flame Strike', animal_being_tamed):
         Pause(3000)
     # while Hits(animal_being_tamed) > 0:
-    #     Msg("all kill")
+    #     Msg('all kill')
     #     WaitForTarget(5000)
     #     Target(animal_being_tamed)
     #     Pause(10000)
