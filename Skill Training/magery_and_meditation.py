@@ -12,7 +12,7 @@ while Skill('Mager') < GOAL:
         # Replace this with a Macro that eats and drinks whatever you want and ends with a `Pause(1000)`.
         # Or simply remove it if you don't need to eat/drink.
         PlayMacro('eat')
-        while Mana() < MaxMana('self'):
+        while Mana('self') < MaxMana('self'):
             UseSkill('Meditatio')
             Pause(10000)
 
