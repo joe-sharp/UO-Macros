@@ -37,7 +37,7 @@ def moveToTree(tree):
     return True
 
 def lumberjack():
-    while not InJournal('not enough') and not InJournal('can't use an axe'):
+    while not InJournal('not enough') and not InJournal("can't use an axe"):
         UseLayer('TwoHanded')
         WaitForTarget(1000)
         TargetTileOffsetResource(-1, 0, 0)

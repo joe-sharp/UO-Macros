@@ -34,7 +34,7 @@ def moveToTree(tree):
     return True
 
 def getKindling():
-    while not InJournal('not enough') and not InJournal('can't use a bladed item'):
+    while not InJournal('not enough') and not InJournal("can't use a bladed item"):
         UseLayer('OneHanded')
         WaitForTarget(1000)
         TargetTileOffsetResource(-1, 0, 0)
